@@ -17,12 +17,53 @@ p{
     }
 }
 
+@keyframes lineDown{
+    0%{
+        transform: scale(1,0);
+        transform-origin: top center;
+    }
+    25%{
+        transform: scale(1,1);
+        transform-origin: top center;
+    }
+    75%{
+        transform: scale(1,1);
+        transform-origin: top center;
+    }
+    76%{
+        transform: scale(1,1);
+        transform-origin:  bottom center;
+    }
+    100%{
+        transform: scale(1,0);
+        transform-origin:  bottom center;
+    }
+}
+
+@keyframes arrowDown{
+    0%{
+        bottom: 25px;
+    }
+    30%{
+        bottom: 15px;
+        opacity: 1;
+    }
+    70%{
+        bottom: 10px;
+        opacity: 1;
+    }
+    100%{
+        bottom: 4px;
+        opacity: 0;
+    }
+}
+
 
 @media screen and (min-width: 320px){
     .nd-page-wrapper, .nd-preloader {
         width: 100%;
         height: 100vh;
-        display: block;
+        display: table;
         background-color: #1C1C1C;
         border: 30px solid black;
     }
@@ -141,6 +182,67 @@ p{
         display: block;
         margin: 15px auto 0;
     }
+
+    /*------Home----*/
+    .nd-display-text{
+        margin-top: 25%;
+    }
+
+    #nd-home-presentation{
+        background-image: url(Src/assets/images/joao-lemon-designer-home.png);
+        background-repeat: no-repeat;
+        background-position: 60% bottom;
+        position: relative;
+    }
+
+    .nd-scroll-down {
+        width: 70px;
+        height: 105px;
+        border-radius: 35px 35px 0 0;
+        background-color: #2CCB69;
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: 0 auto;
+        z-index: 100;
+    }
+    .nd-arrow-down{
+        width: 100%;
+        height: 75px;
+        display: table;
+        margin-top: 30px;
+        position: relative;
+    }
+    .nd-arrow-down img{
+        width: 16px;
+        height: 10px;
+        display: block;
+        position: absolute;
+        bottom: 25px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        opacity: 0;
+        animation: arrowDown 1.5s  linear 1.5s infinite;
+    }
+
+    .nd-arrow-down::before{
+        content: '';
+        width: 2px;
+        height: 50px;
+        display: block;
+        position: absolute;
+        bottom: 25px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        background-color: #000;
+        animation:lineDown 1.5s  linear infinite ;
+        transform-origin: center;
+    }
+
 }
 
 @media screen and (min-width: 576px)
@@ -192,7 +294,7 @@ p{
         display: block;
         margin-top: 5px;
         left: 0;
-        transition: all 0.2s ease-out;
+        transition: all 0.5s ease-out;
      
     }
     .nd-menu a:hover:after{
@@ -288,7 +390,24 @@ p{
 
 .nd-padding-left-15{
     padding-left: 15px;
+  
 }
+
+.nd-title-big{
+    font-size: 120px;
+}
+
+
+.nd-full-height{
+    height: 100vh;
+}
+
+
+.nd-first-section{
+    height: calc(100vh - 30px);
+}
+
+
 
 /* State Classes */
 
@@ -304,3 +423,5 @@ p{
 .nd-fade-out{
     animation: fadeOut 0.3s forwards ease-out;
 }
+
+
