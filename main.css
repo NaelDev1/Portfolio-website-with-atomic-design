@@ -80,6 +80,49 @@ p{
         left: 0;
     }
 
+    .nd-overlay{
+        width: 100%;
+        height: 100vh;
+        display: block;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        background-color: rgba(44, 201, 104, 0.95);
+    }
+
+    .nd-modal{
+        width: 800px;
+        display: table;
+        padding: 0 15px 15px 15px;
+        border-radius: 20px;
+        position: fixed;
+        z-index: 1100;
+        top: 20%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    .nd-modal-header{
+        width: 100%;
+        display: table;
+        position: relative;
+    }
+    .nd-close-modal{
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        border: none;
+        background: transparent;
+        color: #fff;
+        text-align: center;
+        cursor: pointer;
+        position: absolute;
+        top: 0px;
+        right: -10px;
+    }
+
     .nd-preloader-inner{
         margin-top: -45px;
         text-align: center;
@@ -93,6 +136,7 @@ p{
         position: fixed;
         top: 0;
         left: 0;
+        z-index: 200;
     }
 
     .nd-logo{
@@ -103,6 +147,7 @@ p{
         background-color: #2CCB69;
         border-radius:0 0 40px 0;
         text-align: center;
+     
         
     }
     .nd-logo img {
@@ -145,6 +190,7 @@ p{
         border-radius:10px 10px 0px 10px;
         display: none;
         transition: all 0.6s ease-in-out;
+        z-index: 400;
         
     }
     .nd-contact-info::after{
@@ -193,6 +239,7 @@ p{
         background-repeat: no-repeat;
         background-position: 60% bottom;
         position: relative;
+        
     }
 
     .nd-scroll-down {
@@ -317,6 +364,42 @@ p{
     
 }
 
+
+/* Buttons */
+
+.nd-btn{
+    display:table;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease-out;
+}
+
+.nd-btn-medium{
+    height: 38px;
+    padding: 0 27px;
+    border-radius: 19px;
+    font-size: 14px;
+
+} 
+.nd-btn-large{
+    height: 45px;
+    padding: 0 35px;
+    border-radius: 23px;
+    font-size: 16px;
+
+} 
+.nd-btn-small{
+    height: 28px;
+    padding: 0 27px;
+    border-radius: 19px;
+    font-size: 14px;
+
+} 
+
+
 /* Global class */
 
 .nd-title{
@@ -337,6 +420,28 @@ p{
 .nd-text-black{
     color: #000;
 }
+
+.nd-btn-green{
+    background-color: #2CCB69;
+    color: #1C1C1C;
+}
+.nd-btn-green:hover{
+    background-color: #27904f;
+    color: #fff;
+    /*transform:  scale(1.2);*/
+
+}
+
+.nd-btn-dark{
+    background-color:#151515;
+    color:#2CCB69;
+}
+.nd-btn-dark:hover{
+    background-color: #444444;
+    color: #fff;
+}
+
+
 
 
 .nd-bg-green{
